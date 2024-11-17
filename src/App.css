@@ -1,38 +1,107 @@
+/* General App Styles */
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Green background for the header */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: green;
   color: white;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Container for user cards */
+.App-list {
+  display: grid;
+  grid-template-columns: 1fr; /* One column for now, you can expand it to more as needed */
+  gap: 30px; /* Add space between cards */
+  padding: 20px;
+  max-width: 90%; /* Occupy most of the screen width */
+  margin: 3 auto; /* Center the container */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.person-card {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  background-color: #00bfff;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 100%; /* Take up the entire container width */
+  max-width: 1400px; /* Limit width for larger screens */
+  margin-left: 20px; /* Move the card to the right */
+  margin-bottom: 20px; /* Add margin at the bottom */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+
+/* User Card: Top Info */
+.person-top-info {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center; /* Center the text */
+  padding: 10px 0; /* Add vertical padding */
+  border-bottom: 2px solid white; /* Thicker divider for emphasis */
+  margin-bottom: 15px; /* Add space below the header */
+}
+
+/* Layout for the photo and details */
+.person-photo-details {
+  display: flex;
+  flex-wrap: wrap; /* Wrap content on smaller screens */
+  gap: 20px; /* Add spacing between photo and details */
+  align-items: flex-start; /* Align content at the top */
+}
+
+/* User Photo */
+.person-photo {
+  text-align: center;
+  flex: 1 1 150px; /* Flexible layout for responsiveness */
+}
+
+.person-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto; /* Center the image */
+}
+
+/* User Details */
+.person-details {
+  flex: 3; /* Take up more space compared to the photo */
+  font-size: 1em;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.person-details p {
+  margin: 5px 0;
+}
+
+/* Button Styling */
+.details-btn {
+  background-color: white;
+  color: #00bfff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 15px auto; /* Center horizontally */
+  transition: 0.3s;
+  width: 150px; /* Set uniform width for buttons */
+}
+
+.details-btn:hover {
+  background-color: #005f9e;
+  color: white;
 }
